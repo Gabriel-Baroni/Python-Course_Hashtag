@@ -7,12 +7,13 @@ import pandas as pd
 tabela = pd.read_csv("AULA01/produtos.csv")
 
 #Intervalo de tempo (s) para executar cada comando do pyautogui
-pyautogui.PAUSE = 0.5
+pyautogui.PAUSE = 1
 
 #Abrindo o sistema através do chrome
 pyautogui.press("win")  
 pyautogui.write("chrome")
 pyautogui.press("enter")
+time.sleep(3)
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
 
@@ -44,6 +45,6 @@ for linha in tabela.index:
     pyautogui.press("tab")
     obs = tabela.loc[linha, "obs"]
     if not pd.isna(obs):
-        pyautogui.write(str(obs))
+        pyautogui.write(str(tabela.loc[linha, "obs"]))
     pyautogui.press("enter")
     pyautogui.scroll(5000)
