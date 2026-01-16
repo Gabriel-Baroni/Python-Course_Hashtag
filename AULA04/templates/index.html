@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // Conecta ao servidor Socket.IO rodando localmente na porta 5000
+        var socket = io("localhost:5000")
+
+        socket.on("connect", function() {
+            console.log("conectou");
+        });
+
+        // Escuta mensagens vindas do servidor
+        socket.on("message", function(data) {
+            console.log("enviou mensagem");
+            // Adiciona a nova mensagem na lista_mensagens
+            $("#lista_mensagens").append($('<p>').text(data));
+        });
+
+        // Evento de clique no botão enviar
+        $("#botao").on('click', function() {
+            console.log("clicou botao");
+            // Envia a mensagem no formato "Usuario: Mensagem"
+            socket.send($('#usuario').val() + ": " + $('#mensagem').val());
+            // Limpa o campo de mensagem após enviar
+            $('#mensagem').val('');
+        });
+    })
+</script>
+
+<div id="lista_mensagens">
+    </div>
+
+<input type="text" id="usuario" placeholder="Usuario" required>
+<input type="text" id="mensagem" placeholder="Mensagem" required>
+<button id="botao">Enviar</button>
+    
+</body>
+</html>
