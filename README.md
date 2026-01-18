@@ -23,9 +23,9 @@ Nesta seção, detalho o que foi desenvolvido em cada uma das etapas do treiname
 * **O Projeto:** Desenvolvimento de uma IA para classificar o Score de Crédito de clientes (Bom, Médio ou Ruim).
 * **O que fiz:** Apliquei o `scikit-learn` para treinar modelos de **Random Forest** e **KNN**. O objetivo foi prever o perfil de novos clientes com base em dados históricos, atingindo uma acurácia de aproximadamente 82%.
 
-### AULA 04: Chats e Sites 
-* **O Projeto:** Criação de uma aplicação web de chat em tempo real 
-* **O que fiz:** Utilizei a biblioteca `flet` para construir a interface e a lógica. O chat permite comunicação instantânea entre múltiplos usuários conectados via sistema de túnel (PubSub).
+### AULA 04: Chat em Tempo Real 
+* **O Projeto:** Desenvolvimento de um chat ao vivo.
+* **O que fiz:** Utilizei **Flask** e **Flask-SocketIO** para permitir a troca de mensagens instantâneas. Implementei a lógica de *broadcast*, onde uma mensagem enviada por um usuário é transmitida em tempo real para todos os outros conectados.
 
 [Voltar ao topo ↑](#jornada-python---hashtag-treinamentos-)
 
@@ -47,8 +47,8 @@ In this section, I detail what was developed in each stage of the training:
 * **The Project:** Developing an AI to classify customer Credit Scores (Good, Standard, or Poor).
 * **What I did:** Applied `scikit-learn` to train **Random Forest** and **KNN** models. The goal was to predict new customers' profiles based on historical data, achieving an accuracy of approximately 82%.
 
-### LESSON 04: Chatbot and Web Apps (HashZap)
-* **The Project:** Creating a real-time web chat application named "HashZap".
-* **What I did:** Used the `flet` library to build the interface and logic. The chat allows instant communication between multiple users connected via a tunnel system (PubSub).
+### LESSON 04: Real-Time Chat 
+* **The Project:** Live chat application development.
+* **What I did:** Used **Flask** and **Flask-SocketIO** to enable instant messaging. I implemented *broadcast* logic, ensuring that a message sent by one user is transmitted in real-time to all connected peers.
 
 [Back to top ↑](#jornada-python---hashtag-treinamentos-)
