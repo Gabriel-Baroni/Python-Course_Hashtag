@@ -1,0 +1,5 @@
+# Reduz o peso dos notebooks para não "esmagar" o JS e Python
+*.ipynb linguist-vendored
+
+# Remove o peso das bases de dados das estatísticas
+*.csv linguist-vendored
